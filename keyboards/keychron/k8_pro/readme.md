@@ -19,3 +19,28 @@ Flashing example for this keyboard:
 **Reset Key**: Connect the USB cable, toggle mode switch to "Off", hold down the *Esc* key or reset button underneath space bar, then toggle then switch to "Cable".
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+
+
+# Full install instruction for (Windows)
+
+Clone repository and navigate to bluetooth_playground branch
+
+Install [QMK MSYS](https://msys.qmk.fm)
+Install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+
+Open QMK MSYS
+Navigate to cloned directory
+    qmk setup
+    qmk compile
+    qmk clean -a
+    make git-submodule
+    make keychron/k8_pro/ansi/rgb:via
+    
+It should output a file in the current directory
+Open QMK Toolbox
+Follow instruction to enter DFU mode in [update Firmware](https://www.keychron.com/blogs/archived/k8-pro-factory-reset-and-firmware-flash)
+flash the newly compiled file instead
+
+Load the K8-Pro-Ansi-wMatrix.json for via
+
+Done
