@@ -30,6 +30,7 @@ Install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
 
 Open QMK MSYS
 Navigate to cloned directory
+
     qmk setup
     qmk compile
     qmk clean -a
